@@ -9,3 +9,11 @@ env:
   CONTAINER_NAME: app
   ECS_SERVICE: app_service
   ECS_TD: .github/workflows/td.json
+
+jobs:
+  deploy:
+    name: Deploy
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
