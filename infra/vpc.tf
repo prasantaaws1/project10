@@ -4,6 +4,7 @@ resource "aws_vpc" "vpc" {
   enable_dns_hostnames = true
 }
 
+
 resource "aws_subnet" "sn1" {
   cidr_block              = "10.0.1.0/24"
   vpc_id                  = aws_vpc.vpc.id
