@@ -1,8 +1,7 @@
-FROM node:18
-RUN mkdir /src
-WORKDIR /src
-COPY package.json /src/
+FROM node:18-alpine
+WORKDIR /app
+COPY package*.json ./
 RUN npm install
-#COPY . /src
+COPY . .
 EXPOSE 3000
-CMD node server.js
+CMD ["npm", "app.js"]
